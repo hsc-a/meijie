@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wee">翻翻滚滚滚</div>
+</body>
+<script>
+    
+    var link=document.createElement("link");
+    link.setAttribute("rel","stylesheet");
+    link.setAttribute("style","text/css");
+   
+    
+    function re(){
+       
+        var ty=window.innerWidth;
+        if(ty>970){
+            link.setAttribute("href","pc.css")
+        }
+        else{
+            link.setAttribute("href","me.css")
+        }
+          document.getElementsByTagName("head")[0].appendChild(link);
+    }
+    window.onresize=re;
+    re();
+</script>
+</html>
